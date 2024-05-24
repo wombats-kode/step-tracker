@@ -109,7 +109,7 @@ struct DashboardView: View {
                 .sheet(isPresented: $isShowingPermissionPrimingSheet, onDismiss: {
                     // fetch health data
                 }, content: {
-                    HealthKitPermissionPrimingView(hasSeen: $isShowingPermissionPrimingSheet)
+                    HealthKitPermissionPrimingView(hasSeen: $hasSeenPermissionPriming)
                 })
             }
             .tint(isSteps ? .pink : .indigo)
