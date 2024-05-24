@@ -14,6 +14,7 @@
 		79A0323A2BFB3A950026F838 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A032392BFB3A950026F838 /* DashboardView.swift */; };
 		79A0323C2BFB3A960026F838 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79A0323B2BFB3A960026F838 /* Assets.xcassets */; };
 		79A0323F2BFB3A960026F838 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79A0323E2BFB3A960026F838 /* Preview Assets.xcassets */; };
+		79A5C6D82C01106A00C2F4EB /* HealthMetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A5C6D72C01106A00C2F4EB /* HealthMetric.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		79A032392BFB3A950026F838 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		79A0323B2BFB3A960026F838 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79A0323E2BFB3A960026F838 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		79A5C6D72C01106A00C2F4EB /* HealthMetric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthMetric.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				7997A6642BFFE69900137CBC /* HealthKitManager.swift */,
 				79A0323B2BFB3A960026F838 /* Assets.xcassets */,
 				79A0323D2BFB3A960026F838 /* Preview Content */,
+				79A5C6D72C01106A00C2F4EB /* HealthMetric.swift */,
 			);
 			path = "Step Tracker";
 			sourceTree = "<group>";
@@ -155,6 +158,7 @@
 				79A032382BFB3A950026F838 /* Step_TrackerApp.swift in Sources */,
 				7997A6652BFFE69900137CBC /* HealthKitManager.swift in Sources */,
 				7997A6612BFFD87600137CBC /* HealthKitPermissionPrimingView.swift in Sources */,
+				79A5C6D82C01106A00C2F4EB /* HealthMetric.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
