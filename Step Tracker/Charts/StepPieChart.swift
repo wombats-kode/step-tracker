@@ -11,6 +11,7 @@ import SwiftUI
 struct StepPieChart: View {
     
     @State private var rawSelectedChartValue: Double? = 0
+    @State private var lastSelectedChartValue: Double = 0
     
     var selectedWeekday: WeekdayChartData? {
         guard let rawSelectedChartValue else {return nil}
@@ -57,7 +58,7 @@ struct StepPieChart: View {
                             VStack {
                                 Text(selectedWeekday.date.weekdayTitle)
                                     .font(.title3.bold())
-                                    .contentTransition(.identity)
+                                    .animation(.none)
                                 
                                 Text(selectedWeekday.value, format: .number.precision(.fractionLength(0)))
                                     .fontWeight(.medium)
@@ -72,6 +73,13 @@ struct StepPieChart: View {
         }
         .padding()
         .background(RoundedRectangle(cornerRadius: 12).fill(Color(.secondarySystemBackground)))
+        .onChange(of: rawSelectedChartValue) { oldValue, newValue in
+            if let newValue {
+                lastSelectedChartValue = newValue
+            } else {
+                rawSelectedChartValue = lastSelectedChartValue
+            }
+        }
     }
 }
 
