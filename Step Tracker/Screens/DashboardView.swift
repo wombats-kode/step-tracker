@@ -44,31 +44,11 @@ struct DashboardView: View {
                         .pickerStyle(.segmented)
                         
                         StepBarChart(selectedStat: selectedStat, chartData: hkManager.stepData)
-                        
-                        VStack(alignment: .leading) {
-                            VStack(alignment: .leading) {
-                                    Label("Averages", systemImage: "calendar")
-                                        .font(.title3.bold())
-                                        .foregroundStyle(.pink)
-                                    
-                                    Text("Last 28 days")
-                                        .font(.caption)
-                                        .foregroundStyle(.secondary)
-                                }
-                            .padding(.bottom, 12)
-                            
-                            RoundedRectangle(cornerRadius: 12)
-                                .foregroundStyle(.secondary)
-                                .frame(height: 240)
-                        }
-                        .padding()
-                        .background(RoundedRectangle(cornerRadius: 12).fill(Color(.secondarySystemBackground)))
+                        StepPieChart(chartData: ChartMath.averageWeekdayCount(for: hkManager.stepData))
                     }
                 }
                 .padding()
                 .task {
-                    //await hkManager.fetchStepCounts()
-                    //await hkManager.fetchWeights()
                     await hkManager.fetchStepCounts()
                     isShowingPermissionPrimingSheet = !hasSeenPermissionPriming
                 }
