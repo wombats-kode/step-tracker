@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		791715CC2C03466D0007C0AF /* StepBarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791715CB2C03466D0007C0AF /* StepBarChart.swift */; };
+		791715D22C034E800007C0AF /* ChartMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791715D12C034E800007C0AF /* ChartMath.swift */; };
+		791715D42C034ED30007C0AF /* ChartDataTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791715D32C034ED30007C0AF /* ChartDataTypes.swift */; };
+		791715D72C0354070007C0AF /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791715D62C0354070007C0AF /* Date+Ext.swift */; };
+		791715DB2C0374770007C0AF /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = 791715DA2C0374770007C0AF /* Algorithms */; };
 		7997A65D2BFBC54900137CBC /* HealthDataListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7997A65C2BFBC54900137CBC /* HealthDataListView.swift */; };
 		7997A6612BFFD87600137CBC /* HealthKitPermissionPrimingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7997A6602BFFD87600137CBC /* HealthKitPermissionPrimingView.swift */; };
 		7997A6652BFFE69900137CBC /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7997A6642BFFE69900137CBC /* HealthKitManager.swift */; };
@@ -20,6 +24,9 @@
 
 /* Begin PBXFileReference section */
 		791715CB2C03466D0007C0AF /* StepBarChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepBarChart.swift; sourceTree = "<group>"; };
+		791715D12C034E800007C0AF /* ChartMath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartMath.swift; sourceTree = "<group>"; };
+		791715D32C034ED30007C0AF /* ChartDataTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartDataTypes.swift; sourceTree = "<group>"; };
+		791715D62C0354070007C0AF /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
 		7997A65C2BFBC54900137CBC /* HealthDataListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthDataListView.swift; sourceTree = "<group>"; };
 		7997A6602BFFD87600137CBC /* HealthKitPermissionPrimingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitPermissionPrimingView.swift; sourceTree = "<group>"; };
 		7997A6622BFFE51500137CBC /* Step Tracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Step Tracker.entitlements"; sourceTree = "<group>"; };
@@ -38,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				791715DB2C0374770007C0AF /* Algorithms in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +74,8 @@
 			isa = PBXGroup;
 			children = (
 				791715CB2C03466D0007C0AF /* StepBarChart.swift */,
+				791715D12C034E800007C0AF /* ChartMath.swift */,
+				791715D32C034ED30007C0AF /* ChartDataTypes.swift */,
 			);
 			path = Charts;
 			sourceTree = "<group>";
@@ -76,6 +86,14 @@
 				7997A6642BFFE69900137CBC /* HealthKitManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		791715D52C0353CB0007C0AF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				791715D62C0354070007C0AF /* Date+Ext.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		79A0322B2BFB3A950026F838 = {
@@ -100,10 +118,11 @@
 				7997A6622BFFE51500137CBC /* Step Tracker.entitlements */,
 				7997A6632BFFE5A700137CBC /* Step-Tracker-Info.plist */,
 				79A032372BFB3A950026F838 /* Step_TrackerApp.swift */,
+				791715D52C0353CB0007C0AF /* Extensions */,
 				791715D02C034CA00007C0AF /* Managers */,
 				791715CE2C034C720007C0AF /* Model */,
-				791715CD2C034C660007C0AF /* Screens */,
 				791715CF2C034C7A0007C0AF /* Charts */,
+				791715CD2C034C660007C0AF /* Screens */,
 				79A0323B2BFB3A960026F838 /* Assets.xcassets */,
 				79A0323D2BFB3A960026F838 /* Preview Content */,
 			);
@@ -134,6 +153,9 @@
 			dependencies = (
 			);
 			name = "Step Tracker";
+			packageProductDependencies = (
+				791715DA2C0374770007C0AF /* Algorithms */,
+			);
 			productName = "Step Tracker";
 			productReference = 79A032342BFB3A950026F838 /* Step Tracker.app */;
 			productType = "com.apple.product-type.application";
@@ -162,6 +184,9 @@
 				Base,
 			);
 			mainGroup = 79A0322B2BFB3A950026F838;
+			packageReferences = (
+				791715D92C0374770007C0AF /* XCRemoteSwiftPackageReference "swift-algorithms" */,
+			);
 			productRefGroup = 79A032352BFB3A950026F838 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -194,7 +219,10 @@
 				79A032382BFB3A950026F838 /* Step_TrackerApp.swift in Sources */,
 				7997A6652BFFE69900137CBC /* HealthKitManager.swift in Sources */,
 				7997A6612BFFD87600137CBC /* HealthKitPermissionPrimingView.swift in Sources */,
+				791715D22C034E800007C0AF /* ChartMath.swift in Sources */,
 				79A5C6D82C01106A00C2F4EB /* HealthMetric.swift in Sources */,
+				791715D42C034ED30007C0AF /* ChartDataTypes.swift in Sources */,
+				791715D72C0354070007C0AF /* Date+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,6 +436,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		791715D92C0374770007C0AF /* XCRemoteSwiftPackageReference "swift-algorithms" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-algorithms.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		791715DA2C0374770007C0AF /* Algorithms */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 791715D92C0374770007C0AF /* XCRemoteSwiftPackageReference "swift-algorithms" */;
+			productName = Algorithms;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 79A0322C2BFB3A950026F838 /* Project object */;
 }
