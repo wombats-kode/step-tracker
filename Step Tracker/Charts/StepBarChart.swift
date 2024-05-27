@@ -69,7 +69,7 @@ struct StepBarChart: View {
                 ForEach(chartData) { steps in
                     BarMark(x: .value("Date", steps.date, unit: .day),
                             y: .value("Steps", steps.value)
-                        )
+                    )
                     .foregroundStyle(Color.pink.gradient)
                     .opacity(rawSelectedDate == nil || steps.date == selectedHealthMetric?.date ? 1.0 : 0.3)
                 }
@@ -93,7 +93,8 @@ struct StepBarChart: View {
             
         }
         .padding()
-        .background(RoundedRectangle(cornerRadius: 12).fill(Color(.secondarySystemBackground)))    }
+        .background(RoundedRectangle(cornerRadius: 12).fill(Color(.secondarySystemBackground)))
+    }
     
     var annotationView: some View {
         VStack(alignment: .leading) {
@@ -116,5 +117,5 @@ struct StepBarChart: View {
 }
 
 #Preview {
-    StepBarChart(selectedStat: .steps, chartData: HealthMetric.mockData)
+    StepBarChart(selectedStat: .steps, chartData: MockData.steps)
 }
