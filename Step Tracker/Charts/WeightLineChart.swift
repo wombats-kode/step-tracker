@@ -64,15 +64,15 @@ struct WeightLineChart: View {
                 ForEach(chartData) { weight in
                     AreaMark(
                         x: .value("Day", weight.date, unit: .day),
-                        yStart: .value("value", weight.value),
+                        yStart: .value("Value", weight.value),
                         yEnd: .value("Min Value", minValue)
                     )
                     .foregroundStyle(Gradient(colors: [.indigo.opacity(0.5), .clear]))
                     .interpolationMethod(.catmullRom)
 
                     LineMark(
-                        x: .value("Day", weight.date),
-                        y: .value("value", weight.value)
+                        x: .value("Day", weight.date, unit: .day),
+                        y: .value("Value", weight.value)
                     )
                     .foregroundStyle(.indigo)
                     .interpolationMethod(.catmullRom)
