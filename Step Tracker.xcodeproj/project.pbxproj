@@ -23,6 +23,7 @@
 		79A0323C2BFB3A960026F838 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79A0323B2BFB3A960026F838 /* Assets.xcassets */; };
 		79A0323F2BFB3A960026F838 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79A0323E2BFB3A960026F838 /* Preview Assets.xcassets */; };
 		79A5C6D82C01106A00C2F4EB /* HealthMetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A5C6D72C01106A00C2F4EB /* HealthMetric.swift */; };
+		79E5257F2C0675E9005CE982 /* WeightDiffBarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E5257E2C0675E9005CE982 /* WeightDiffBarChart.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		79A0323B2BFB3A960026F838 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79A0323E2BFB3A960026F838 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		79A5C6D72C01106A00C2F4EB /* HealthMetric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthMetric.swift; sourceTree = "<group>"; };
+		79E5257E2C0675E9005CE982 /* WeightDiffBarChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightDiffBarChart.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				791715CB2C03466D0007C0AF /* StepBarChart.swift */,
 				791715DC2C03A7800007C0AF /* StepPieChart.swift */,
 				798467082C04B286000D0547 /* WeightLineChart.swift */,
+				79E5257E2C0675E9005CE982 /* WeightDiffBarChart.swift */,
 				791715D12C034E800007C0AF /* ChartMath.swift */,
 				791715D32C034ED30007C0AF /* ChartDataTypes.swift */,
 			);
@@ -231,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7997A65D2BFBC54900137CBC /* HealthDataListView.swift in Sources */,
+				79E5257F2C0675E9005CE982 /* WeightDiffBarChart.swift in Sources */,
 				79A0323A2BFB3A950026F838 /* DashboardView.swift in Sources */,
 				791715CC2C03466D0007C0AF /* StepBarChart.swift in Sources */,
 				7984670C2C04B4AA000D0547 /* MockData.swift in Sources */,
