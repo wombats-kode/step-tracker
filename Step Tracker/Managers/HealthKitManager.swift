@@ -12,6 +12,7 @@ import Observation
 @Observable class HealthKitManager {
     
     let store = HKHealthStore()
+    
     let types: Set = [HKQuantityType(.stepCount), HKQuantityType(.bodyMass)]
     
     var stepData: [HealthMetric] = []
@@ -85,6 +86,22 @@ import Observation
         } catch {
             
         }
+    }
+    
+    func addStepData(for date: Date, value: Double) async {
+        
+        let stepQuantity = HKQuantity(unit: .count(), doubleValue: value)
+        let stepSample = HKQuantitySample(type: HKQuantityType(.stepCount), quantity: stepQuantity, start: date, end: date)
+        try! await store.save(stepSample)
+        
+    }
+    
+    func addWeightData(for date: Date, value: Double) async {
+        
+        let weightQuantity = HKQuantity(unit: .pound(), doubleValue: value)
+        let weightSample = HKQuantitySample(type: HKQuantityType(.bodyMass), quantity: weightQuantity, start: date, end: date)
+        try! await store.save(weightSample)
+        
     }
     
     //    func addSimulatorData() async {
